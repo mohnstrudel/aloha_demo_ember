@@ -36,8 +36,15 @@ export default Route.extend({
       name: null,
       surfboard: null,
 
+      // Всегда использовать get для computed properties
       nameAndBoard: Ember.computed('name', 'surfboard', function(){
         return `My name is ${this.get('name')} and I ride a ${this.get('surfboard')} `;
+      }),
+
+      nameChanged: Ember.observer('name', function(){
+        // log change
+        // console.log(`name changed to: ${this.get('name')}`);
+        return this.get('name');
       }),
 
       sup(comment){
@@ -51,6 +58,10 @@ export default Route.extend({
     });
 
     kook.sup(kook.get('nameAndBoard'));
+
+    kook.set('name', 'Tourist');
+
+    kook.sup(kook.get('nameChanged'));
 
 
 
