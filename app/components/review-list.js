@@ -2,7 +2,7 @@ import Component from '@ember/component';
 
 export default Component.extend({
   actions: {
-    say() {
+    addReview() {
       console.log('New review was added!');
       this.set('model.newReview.id', this.get('model').reviewList.length + 1);
       let pushReview = {
