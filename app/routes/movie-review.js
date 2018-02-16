@@ -9,7 +9,7 @@ let movieDetails = {
     {id: 2, title: 'subjective review', reviewText: 'from my point of view, pretty boring'},
     {id: 3, title: 'objective review', reviewText: 'why not using the metrics system'}
   ],
-  newReview: []
+  newReview: {id: 0, title: '', reviewText: ''}
 }
 
 export default Route.extend({
