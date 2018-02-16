@@ -1,1 +1,6 @@
-<h2> Surfboards here </h2>
+<h2> this is the surfboards page </h2>
+
+{{#each model as |surfboard|}}
+  <h3>{{surfboard.name}}</h3>
+  <p>{{surfboard.description}}</p>
+{{/each}}

@@ -1,0 +1,11 @@
+<h1>Here we go with Movie Review Detail page</h1>
+<p>(Pretend we selected a specific movie on the last page)</p>
+
+<br>
+<h3>Movie Title: </h3> {{model.title}}<br>
+<h3>Release date: </h3> {{model.releaseDate}}<br>
+<h3>Description: </h3> {{model.description}}<br>
+
+Here is a list of reviews for the selected movie: <br><br>
+{{#review-list model=model}}
+{{/review-list}}

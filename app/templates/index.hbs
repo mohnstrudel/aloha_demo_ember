@@ -3,8 +3,13 @@
 <nav>
   <ul>
     <li>{{#link-to 'mahalo'}} Mahalo {{/link-to}}</li>
-    <li>{{#link-to 'beaches'}} Beaches {{/link-to}}</li>
+    {{!-- <li>{{#link-to 'beaches/1'}} Beaches {{/link-to}}</li> --}}
     <li>{{#link-to 'surfboards'}} Surfboards {{/link-to}}</li>
     <li>{{#link-to 'countries'}} Countries {{/link-to}}</li>
+    {{!-- <li>{{#link-to http://hello.world 1}}Beaches{{/link-to}}</li> --}}
   </ul>
 </nav>
+
+<p><button {{action 'select' review}}></button>
+  Review mew
+</p>

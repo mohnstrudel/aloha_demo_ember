@@ -1,0 +1,16 @@
+{{#each model.reviewList as |review|}}
+  <h2>{{review.title}}</h2>
+  <p>{{review.reviewText}}</p>
+{{/each}}
+
+<h3>Write a review</h3>
+
+<p>
+  Title: <br>
+  {{input id=frmTitle value=model.newReview.title placeholder='Title'}}
+  <br>
+  {{textarea id=frmText cols='35' rows='8' value=model.newReview.reviewText placeholder='Your Review'}}
+</p>
+<p>
+  <button {{action 'addReview' model}}>Create Review</button>
+</p>

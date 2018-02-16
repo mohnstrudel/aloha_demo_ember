@@ -8,13 +8,12 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('mahalo');
-  this.route('beaches', function(){
-    this.route('black_sand');
-  });
+  this.route('beaches', {path: 'beaches/:beach_id'});
   this.route('surfboards', {path: '/boards'});
   this.route('countries', function(){
     this.route('egypt');
   });
+  this.route('movie-review');
 });
 
 export default Router;
