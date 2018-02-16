@@ -13,7 +13,6 @@ let movieDetails = {
 }
 
 export default Route.extend({
-
   model(){
     return movieDetails;
   }
